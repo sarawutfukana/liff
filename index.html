@@ -122,7 +122,7 @@
       document.getElementById("isInClient").append(liff.isInClient())
 
       if (liff.isInClient) {
-        document.getElementById("btnLogOut").style.display = "none"
+        //document.getElementById("btnLogOut").style.display = "none"
       } else {
         document.getElementById("btnMsg").style.display = "none"
         document.getElementById("btnScanCode").style.display = "none"
@@ -136,6 +136,7 @@
       await liff.init({ liffId: "1654364349-EBGRPwRr" })
       document.getElementById("isLoggedIn").append(liff.isLoggedIn())
       if (liff.isLoggedIn()) {
+        document.getElementById("btnLogOut").style.display = "display"
         getEnvironment()
         getUserProfile()
         getContext()
